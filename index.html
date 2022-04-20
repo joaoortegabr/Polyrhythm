@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Poliritmo</title>
+</head>
+<body>
+    <div class="container">
+            <div id="box1" class="box-button" onclick="validateTouch()"></div>
+
+            <div class="info-area">
+                <h4>Repetition Rate / S</h4>
+                <div id="speed-selector">
+                    <div id="speedSelector1" class="speedSelector">
+                        <ul>
+                            <li><input type="radio" name="bt1speed" id="bt1speed1" value="1" checked="checked">
+                                <label for="bt1speed">1/1</label></li>
+                            <li><input type="radio" name="bt1speed" id="bt1speed2" value="2">
+                                <label for="bt1speed">2/1</label></li>
+                            <li><input type="radio" name="bt1speed" id="bt1speed4" value="4">
+                                <label for="bt1speed">4/1</label></li>
+
+                    </div>
+                    <div id="speedSelector2" class="speedSelector">
+                        <ul>
+                            <li><label for="bt2speed">1/1</label>
+                                <input type="radio" name="bt2speed" id="bt2speed1" value="1" checked="checked"></li>
+                            <li><label for="bt2speed">2/1</label>
+                                <input type="radio" name="bt2speed" id="bt2speed2" value="2"></li>
+                            <li><label for="bt2speed">4/1</label>
+                                <input type="radio" name="bt2speed" id="bt2speed4" value="4"></li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <h4>Beat Frequency (b/s)</h4>
+                <div>
+                    <select name="beatFrequency" id="beatFrequency" onchange="updateBeatFrequency()">
+                        <option value="1" selected="selected">1 / 1</option>
+                        <option value="2">2 / 1</option>
+                        <option value="4">4 / 1</option>
+                    </select>
+                </div>
+            
+                <div class="record">Score: <span id="scoreDisplay">0</span></div>
+                <button onclick="start()">START</button>
+            </div>
+
+            <div id="box2" class="box-button" onclick="validateTouch()"></div>
+        </div>
+    
+
+
+    
+
+    <script src="./script.js"></script>
+</body>
+</html>

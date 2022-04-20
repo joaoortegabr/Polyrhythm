@@ -1,0 +1,173 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    color: #000;
+}
+
+.button {
+    display: flex;
+    justify-content: center;
+
+    cursor: pointer;
+}
+
+#box1 {
+    background-color: blue;
+    visibility: visible;
+} 
+
+#box2 {
+    background-color: green;
+    visibility: visible;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 200px 1fr;
+    grid-auto-rows: minmax(100px, auto);
+    text-align: center;
+    height: 100vh;
+}
+
+.info-area {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    padding: 10px 20px;
+    min-width: 120px;
+}
+
+#speed-selector {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    font-size: 0.7rem; 
+}
+
+h4 {
+    margin: 6px 3px;
+    font-size: 0.9rem;
+}
+
+.record {
+    margin: 6px 3px;
+    text-align: center;
+    font-size: 0.9rem;
+    min-height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.speedSelector {
+    display: flex;
+    flex-flow: column wrap;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0 10px;
+}
+
+li {
+    display: flex;
+    margin: 3px 0;
+    padding: 2px;
+    justify-content: center;
+    align-items: center;
+    font-size: 1rem;
+}
+
+input[type=radio] {
+    accent-color: #31a131;
+    margin: 0 5px;
+
+}
+
+.blink {
+    animation-name: blink-animation;
+    animation-duration: 1000ms;
+    animation-timing-function: ease-in;
+    animation-iteration-count: infinite;
+    animation-fill-mode: forwards;
+
+    -webkit-animation-name: blink-animation;
+    -webkit-animation-duration: 1000ms;
+    -webkit-animation-timing-function: ease-in;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-fill-mode: forwards;
+
+    -moz-animation-delay: 0ms;
+    -webkit-animation-delay: 0ms;
+    animation-delay: 0ms;
+}
+
+@keyframes blink-animation {
+    0% {
+        opacity: 1;
+    }
+    20% {
+        pointer-events: none;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+@-webkit-keyframes blink-animation {
+    0% { opacity: 1; }
+    20% { pointer-events: none; }
+    100% { opacity: 0; }
+}
+
+
+.score {
+    animation-name: score-animation;
+    animation-duration: 1000ms;
+    animation-timing-function: ease-out;
+    animation-iteration-count: 1;
+    animation-fill-mode: backwards;
+
+    -webkit-animation-name: score-animation;
+    -webkit-animation-duration: 400ms;
+    -webkit-animation-timing-function: ease-out;
+    -webkit-animation-iteration-count: 1;
+    -webkit-animation-fill-mode: forwards;
+
+    -moz-animation-delay: 200ms;
+    -webkit-animation-delay: 0ms;
+    animation-delay: 0ms;
+}
+
+@keyframes score-animation {
+    0% { opacity: 0; 
+        color: #f00;}
+    40% { opacity: 1; 
+        font-size: 4.2rem;
+        color: #31a131; }
+}
+
+/*
+
+.box-button {
+    transition: box-shadow 0.2s, opacity 0.2s;
+    opacity: 0.5;
+  }
+  
+.box-button.blink {
+    opacity: 1;
+  }
+
+
+  */
